@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Maven+Pro:wght@400;500;600&family=Montserrat:wght@300;400;500;600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.note_context {
+	display: grid;
+	grid-template-rows: 1fr 10px 3fr;
+	height: 90vh;
+	width: 100%;
+	padding: 20px 10px;
+}
+.note,
+.title {
+	border: none;
+	padding: 10px 20px;
+	font-family: "Poppins";
+	background: none;
+	color: black;
+	font-size: 25px;
+}
+.note,
+.title[type="text"]:focus {
+	outline: none;
+}
+.note { font-size: 22px; }
+
+.note::-webkit-scrollbar {
+	width: 10px;
+}
+.note::-webkit-scrollbar-thumb {
+	background-color: grey;
+}
+.separator {
+	width: 100%;
+	height: 2px;
+	background-color: black;
+}
+.header {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	padding: 10px 50px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 50px;
+}
+.dp {
+	width: 40px;
+	height: 40px;
+	background-color: grey;
+	border-radius: 50%;
+}
+.settings {
+        display: flex;
+        width: 40px;
+        height: 10px;
+        column-gap: 5px;
+        margin: 30px 20px;
+        cursor: pointer;
+}
+.settings span {
+        width: 10px;
+        height: 10px;
+        background: rgb(77, 76, 76);
+        border-radius: 50%;
+}
+.dts {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width:100%;
+        font-family: "Maven Pro", sans-serif;
+        font-size:20px;
+        font-weight: 400;
+}
+
+.menu {
+        position: fixed;
+        right: 10px;
+        top: 60px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: left;
+        padding: 10px 10px;
+        font-size: 20px;
+        box-shadow: 10px 10px 30px rgba(128, 128, 128, 0.5);
+        border-radius: 3px;
+        z-index: 100;
+        opacity: 0;
+        transition: 0.1s all linear;
+        font-family: "Maven Pro";
+}
+.menu a {
+        cursor: pointer;
+        transition: 0.1s all linear;
+        font-weight: 500;
+}
+.menu a:hover {
+        color: grey;
+}
+.show {
+        opacity: 1;
+}
+.submit-button {
+        position:fixed;
+        bottom:20px;
+        right:20px;
+        padding:5px 10px;
+        outline:none;
+        border:none;
+        font-family: "Poppins";
+        font-size:15px;
+        border-radius: 3px;
+        background-color: black;
+        color:white;
+}
